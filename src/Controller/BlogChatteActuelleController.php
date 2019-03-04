@@ -8,11 +8,11 @@ use Symfony\Component\Routing\Annotation\Route;
 class BlogChatteActuelleController extends AbstractController
 {
     /**
-     * @Route("/blog/chatte/actuelle", name="blog_chatte_actuelle")
+     * @Route("/blog/chatte/actuelle", name="BlogChatteActuelle")
      */
     public function index()
     {
-        return $this->render('blog_chatte_actuelle/index.html.twig', [
+        return $this->render('BlogChatteActuelle/index.html.twig', [
             'controller_name' => 'BlogChatteActuelleController',
         ]);
     }
@@ -23,6 +23,6 @@ class BlogChatteActuelleController extends AbstractController
 
     public function home()
     {
-        return $this->render('blog_chatte_actuelle/home.html.twig');
+        return $this->render('BlogChatteActuelle/home.html.twig');
     }
 }
