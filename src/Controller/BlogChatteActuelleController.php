@@ -16,4 +16,13 @@ class BlogChatteActuelleController extends AbstractController
             'controller_name' => 'BlogChatteActuelleController',
         ]);
     }
+
+    /**
+     * @Route("/",name="home")
+     */
+
+    public function home()
+    {
+        return $this->render('blog_chatte_actuelle/home.html.twig');
+    }
 }
