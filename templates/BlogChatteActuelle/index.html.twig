@@ -1,20 +1,15 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello BlogChatteActuelleController!{% endblock %}
-
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
+    <section class="articles">
+        <h1>Articles</h1>
+        <article>
+            <h3>Article</h3>
+            <img src="http://placehold.it/350x150" alt="Smiley face" >
+            <div>
+            <a href="{{ path('BlogChatteActuelleShow') }}" class="btn btn-primary">Primary</a>
+            </div>
+        </article>
+    </section>
 
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
-
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ 'C:/wamp64/www/chatte_actuelle/src/Controller/BlogChatteActuelleController.php'|file_link(0) }}">src/Controller/BlogChatteActuelleController.php</a></code></li>
-        <li>Your template at <code><a href="{{ 'C:/wamp64/www/chatte_actuelle/templates/blog_chatte_actuelle/index.html.twig'|file_link(0) }}">templates/blog_chatte_actuelle/index.html.twig</a></code></li>
-    </ul>
-</div>
 {% endblock %}

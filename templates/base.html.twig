@@ -8,32 +8,38 @@
     </head>
     <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">Chatte</br>Actuelle</a>
+        <!-- Icone -->
+        <a class="navbar-brand" href="/">Chatte</br>Actuelle</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
+        <!-- Fin Icone -->
 
+        <!-- Debut Navbar -->
         <div class="collapse navbar-collapse" id="navbarColor03">
             <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
-                </li>
+                <!-- Menu Navbar-->
                 <li class="nav-item">
-                    <a class="nav-link" href="blog_chatte_actuelle/Articles">Articles</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Pricing</a>
+                    <a class="nav-link" href="/BlogChatteActuelle">Articles</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Connection</a>
                 </li>
             </ul>
+            <!-- Fin du Menu navbar -->
+
+            <!-- Option Search -->
             <form class="form-inline my-2 my-lg-0" wtx-context="CD46D633-D0AE-41FD-8C5B-DD00B705DA54">
                 <input class="form-control mr-sm-2" type="text" placeholder="Search" wtx-context="7C0A6F80-49E1-4CCE-81EF-37A8B7E00E8B">
                 <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
             </form>
+            <!-- Fin Option Search -->
+
         </div>
+        <!--  Fin Navbar -->
     </nav>
+
+
     <div class="container">
         {% block body %}{% endblock %}
     </div>
