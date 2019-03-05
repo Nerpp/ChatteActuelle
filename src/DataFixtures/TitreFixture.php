@@ -11,7 +11,7 @@ class TitreFixture extends Fixture
     public function load(ObjectManager $manager)
     {
         for($i = 1;$i <= 10;$i++){
-            $article = new Article();
+            $article = new Titre();
             $article->settitre("Titre de l'article n°$i");
             $article->setarticle("<p>Contenu de l'article $i</p>");
             $article->setimage("http://placehold.it/350x150");
