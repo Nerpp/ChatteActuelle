@@ -4,6 +4,8 @@ namespace App\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
+use App\Entity\Titre;
+use App\Repository\TitreRepository;
 
 
 class BlogChatteActuelleController extends AbstractController
@@ -11,10 +13,15 @@ class BlogChatteActuelleController extends AbstractController
     /**
      * @Route("/BlogChatteActuelle", name="BlogChatteActuelle")
      */
-    public function index()
+    public function index(TitreRepository $repo)
     {
+       
+
+        $articles = $repo->findAll();
+
         return $this->render('BlogChatteActuelle/index.html.twig', [
             'controller_name' => 'BlogChatteActuelleController',
+            'articles' => $articles
         ]);
     }
 
@@ -28,9 +35,14 @@ class BlogChatteActuelleController extends AbstractController
     }
 
     /**
-     * @Route("/BlogChatteActuelle/article/12", name="BlogChatteActuelleShow")
+     * @Route("/BlogChatteActuelle/{id}", name="BlogChatteActuelleShow")
      */
-    public function show(){
-        return $this->render('BlogChatteActuelle/show.html.twig');
+    public function show(Titre $article){
+        
+        return $this->render('BlogChatteActuelle/show.html.twig',[
+            'article' => $article
+        ]);
     }
+
+
 }

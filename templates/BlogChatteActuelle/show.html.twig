@@ -2,12 +2,22 @@
 
 {% block body %}
 
-    <article>
-        <h3>Article</h3>
-        <img src="http://placehold.it/350x150" alt="Smiley face" >
-        <div>
-            <a href="{{ path('BlogChatteActuelle') }}" class="btn btn-primary">Retour</a>
-        </div>
-    </article>
+   <article>
+            <div class="SousTitres">
+            <h1>{{article.titre}}</h1>
+            </div>
+
+            <div class="metadata">
+            <p>Ecrit le {{article.date | date('d/m/Y')}} à {{ article.date | date('H:i')}} dans la categories cool</p>
+            </div>
+            <div class ="content">
+            <img src="{{article.image}}" alt="Smiley face" >
+            </div>
+
+            <div class="Articles">
+            {{article.article | raw}}
+            </div>
+
+        </article>
 
 {% endblock body %}
